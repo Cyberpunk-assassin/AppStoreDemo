@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WhatsNewCell" rowHeight="150" id="XO2-U6-asw" customClass="WhatsNewTableViewCell" customModule="AppStoreDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XO2-U6-asw" id="7rd-w9-18n">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-Cj-ReT">
+                        <rect key="frame" x="15" y="8" width="569" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-d6-QMY">
+                        <rect key="frame" x="15" y="29.5" width="569" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-KV-Dds">
+                        <rect key="frame" x="12" y="50" width="575" height="89.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <connections>
+                            <outlet property="delegate" destination="XO2-U6-asw" id="ile-CO-qAC"/>
+                        </connections>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DNN-Cj-ReT" firstAttribute="bottom" secondItem="ppK-d6-QMY" secondAttribute="top" constant="2" id="4jG-Oa-FWf"/>
+                    <constraint firstItem="DNN-Cj-ReT" firstAttribute="leading" secondItem="7rd-w9-18n" secondAttribute="leading" constant="15" id="BxI-3e-fUq"/>
+                    <constraint firstAttribute="trailing" secondItem="Opv-KV-Dds" secondAttribute="trailing" constant="13" id="Gvb-Za-WCi"/>
+                    <constraint firstAttribute="trailing" secondItem="ppK-d6-QMY" secondAttribute="trailing" constant="16" id="Q9K-5M-uEE"/>
+                    <constraint firstAttribute="bottom" secondItem="Opv-KV-Dds" secondAttribute="bottom" constant="10" id="Ucl-3X-00c"/>
+                    <constraint firstItem="ppK-d6-QMY" firstAttribute="bottom" secondItem="Opv-KV-Dds" secondAttribute="top" constant="-1" id="V2Z-64-LGE"/>
+                    <constraint firstItem="Opv-KV-Dds" firstAttribute="leading" secondItem="7rd-w9-18n" secondAttribute="leading" constant="12" id="f03-7y-gGI"/>
+                    <constraint firstAttribute="trailing" secondItem="DNN-Cj-ReT" secondAttribute="trailing" constant="16" id="nJh-5V-vGk"/>
+                    <constraint firstItem="DNN-Cj-ReT" firstAttribute="top" secondItem="7rd-w9-18n" secondAttribute="top" constant="8" id="omq-jF-VIJ"/>
+                    <constraint firstItem="ppK-d6-QMY" firstAttribute="leading" secondItem="7rd-w9-18n" secondAttribute="leading" constant="15" id="tiu-IE-g1n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="releaseDateLabel" destination="ppK-d6-QMY" id="TO7-hM-GLx"/>
+                <outlet property="titleLabel" destination="DNN-Cj-ReT" id="1Ea-oB-ZBL"/>
+                <outlet property="versionDescrTextView" destination="Opv-KV-Dds" id="Jpm-pl-tv9"/>
+            </connections>
+            <point key="canvasLocation" x="301" y="353"/>
+        </tableViewCell>
+    </objects>
+</document>
