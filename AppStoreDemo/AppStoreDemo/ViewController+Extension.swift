@@ -55,7 +55,6 @@ extension ViewController {
         task.resume()
     }
     
-    
     func getRelatedDetailsData(){
         self.relatedDetails = []
         let url:NSURL! = NSURL(string: "https://itunes.apple.com/lookup?id=\(artistId)&entity=software")

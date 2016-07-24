@@ -98,6 +98,4 @@ class RelatedTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
             delegate?.pushViewController(vc)
         }
     }
-    
-    
 }

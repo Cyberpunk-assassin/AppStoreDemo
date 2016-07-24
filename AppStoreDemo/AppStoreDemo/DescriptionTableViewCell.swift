@@ -19,7 +19,6 @@ class DescriptionTableViewCell: UITableViewCell, UITextViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        descTxtView.delegate = self
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -71,6 +70,5 @@ class DescriptionTableViewCell: UITableViewCell, UITextViewDelegate {
             }
         }
     }
-
     
 }

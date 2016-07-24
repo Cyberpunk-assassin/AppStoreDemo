@@ -27,7 +27,5 @@ class ViewManager: NSObject {
         let vc = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         return vc
         
-    }
-        
-   
+    }   
 }

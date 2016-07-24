@@ -59,7 +59,6 @@ public class StarRatingView: UIView {
         
     }
     
-    
     public func setRating(rating: Float) {
         self.currentRating = rating
         self.setNeedsLayout()

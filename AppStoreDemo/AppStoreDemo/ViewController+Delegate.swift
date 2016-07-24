@@ -36,16 +36,6 @@ extension ViewController : UITextViewDelegate {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("TableFormHeaderView")
         let header = view as! TableFormHeaderView
-        //        if !UIAccessibilityIsReduceTransparencyEnabled() {
-        //            header.contentsView!.backgroundColor = UIColor.clearColor()
-        //
-        //            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.ExtraLight)
-        //            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        //            blurEffectView.frame = header.contentsView!.bounds
-        //            blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        //
-        //            header.contentsView?.addSubview(blurEffectView)
-        //        }
         header.imageViewApp?.image = UIImage(named: "placeholder")
         headerImageView.image = UIImage(named: "placeholder")
         header.ratingView.setRating(5.0)
