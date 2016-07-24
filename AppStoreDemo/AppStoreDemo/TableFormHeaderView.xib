@@ -122,8 +122,11 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a82-an-X94">
-                            <rect key="frame" x="0.0" y="207" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="206.5" width="414" height="0.5"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="JoB-5T-rhw"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
@@ -162,6 +165,7 @@
                         <constraint firstItem="NF6-IF-h2H" firstAttribute="top" secondItem="dnf-5F-pm7" secondAttribute="bottom" constant="14" id="fee-Op-X0a"/>
                         <constraint firstItem="82W-lP-UPW" firstAttribute="leading" secondItem="sLo-fp-HL2" secondAttribute="trailing" constant="5" id="fiC-6l-Ef2"/>
                         <constraint firstAttribute="trailing" secondItem="a82-an-X94" secondAttribute="trailing" id="qfY-z8-IHg"/>
+                        <constraint firstAttribute="bottom" secondItem="NF6-IF-h2H" secondAttribute="bottom" constant="9" id="vZi-2x-KAc"/>
                         <constraint firstItem="a82-an-X94" firstAttribute="top" secondItem="NF6-IF-h2H" secondAttribute="bottom" constant="9.5" id="wtm-Ea-JFp"/>
                         <constraint firstItem="WUp-ag-9ou" firstAttribute="top" secondItem="FKg-C4-UL3" secondAttribute="bottom" constant="2" id="x6o-Pi-m7o"/>
                     </constraints>
@@ -169,6 +173,7 @@
                         <mask key="constraints">
                             <exclude reference="x6o-Pi-m7o"/>
                             <exclude reference="Ike-Da-Lli"/>
+                            <exclude reference="wtm-Ea-JFp"/>
                             <exclude reference="ed8-By-k5r"/>
                         </mask>
                     </variation>
