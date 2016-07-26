@@ -11,7 +11,7 @@ import UIKit
 
 extension ViewController : UITextViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let rowHeight: CGFloat = self.tableView.frame.height - headerImageView.frame.height-6
+        let rowHeight: CGFloat = self.tableView.frame.height - headerImageView.frame.height
         return rowHeight
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
