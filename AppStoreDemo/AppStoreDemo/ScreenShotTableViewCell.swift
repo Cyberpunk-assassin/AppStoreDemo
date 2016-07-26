@@ -24,8 +24,7 @@ class ScreenShotTableViewCell: UITableViewCell, UICollectionViewDataSource {
         
         session = NSURLSession.sharedSession()
         task = NSURLSessionDownloadTask()
-        
-        
+                
         self.cache = NSCache()
         
         self.screenShotCollectionView.registerNib(UINib(nibName: "ScreenShotCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ScreenShotCVCell")

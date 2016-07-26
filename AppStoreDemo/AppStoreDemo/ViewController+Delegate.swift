@@ -11,26 +11,7 @@ import UIKit
 
 extension ViewController : UITextViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var rowHeight: CGFloat = 100.0
-        if self.selectedIndexNumber == 0 {
-            switch(indexPath.row){
-            case 0:
-                rowHeight = 200
-                
-                
-            default:
-                rowHeight = UITableViewAutomaticDimension
-            }
-            
-        } else if self.selectedIndexNumber == 1 {
-            rowHeight = UITableViewAutomaticDimension
-            
-        }
-        else if self.selectedIndexNumber == 2 {
-            
-            rowHeight = 190
-            
-        }
+        let rowHeight: CGFloat = self.tableView.frame.height - headerImageView.frame.height-6
         return rowHeight
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

@@ -54,15 +54,15 @@ class CommentsReviewTableViewCell: UITableViewCell {
         textViewDirtyCount += 1
         performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange),
                         withObject: nil,
-                        afterDelay: 0) // Wait until typing stopped
+                        afterDelay: 0) 
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
-        textViewDirtyCount = 0 // initialize queuedTextVewDidChange
+        textViewDirtyCount = 0 
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        textViewDirtyCount = -1 // prevent any further queuedTextVewDidChange
+        textViewDirtyCount = -1 
     }
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         self.textView.attributedText = nil

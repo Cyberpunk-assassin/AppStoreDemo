@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, TableFormHeaderViewDelegate, RelatedTableViewCellDelegate {
+class ViewController: UIViewController, TableFormHeaderViewDelegate, ChildTableViewCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerImageView: UIImageView!
@@ -54,17 +54,16 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, RelatedTabl
         currentDetails = Details()
         self.getDetailsData()
         self.getCommentsArray()
-        
-        registerDetailTableCells()
-        registerRelatedDetailTableCells()
-        registerReviewsTableCells()
-        
+                
         filteringSegmentView(nil)
         // Do any additional setup after loading the view, typically from a nib.
         let nib = UINib(nibName: "TableFormHeaderView", bundle: nil)
         tableView.registerNib(nib, forHeaderFooterViewReuseIdentifier: "TableFormHeaderView")
+        self.tableView.registerNib(UINib(nibName: "ChildTVTableViewCell", bundle: nil), forCellReuseIdentifier: "ChildTVTableViewCell")
+
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.backgroundColor = UIColor.clearColor()
         
     }
     
@@ -73,31 +72,14 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, RelatedTabl
         // Dispose of any resources that can be recreated.
     }
         
-    //registers each table cell xib with tableview
-    func registerDetailTableCells() {
-        self.tableView.registerNib(UINib(nibName: "ScreenShotTableViewCell", bundle: nil), forCellReuseIdentifier: "ScreenShotTblCell")
-        self.tableView.registerNib(UINib(nibName: "DescriptionTableViewCell", bundle: nil), forCellReuseIdentifier: "DescriptionCell")
-        self.tableView.registerNib(UINib(nibName: "WhatsNewTableViewCell", bundle: nil), forCellReuseIdentifier: "WhatsNewCell")
-        self.tableView.registerNib(UINib(nibName: "InfoTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoCell")
-        self.tableView.registerNib(UINib(nibName: "ExtraCell", bundle: nil), forCellReuseIdentifier: "ExtraCell")
-    }
-    func registerRelatedDetailTableCells() {
-        self.tableView.registerNib(UINib(nibName: "RelatedAppTableViewCell", bundle: nil), forCellReuseIdentifier: "RelatedTVCell")
-    }
-    
-    func registerReviewsTableCells() {
-        self.tableView.registerNib(UINib(nibName: "RatingsReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "RatingsReviewTableViewCell")
-        self.tableView.registerNib(UINib(nibName: "CustomerReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomerReviewTableViewCell")
-        self.tableView.registerNib(UINib(nibName: "CommentsReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentsReviewTableViewCell")
-    }
-    
+        
     func filteringSegmentView(sender: UISegmentedControl?) {
         self.selectedIndexNumber = sender?.selectedSegmentIndex ?? 0
         
         switch self.selectedIndexNumber {
         case 0:
-            self.getDetailsData()
             self.numberOfRowsInSection = 4+extraArr.count
+            self.getDetailsData()
             break
         case 1:
             self.numberOfRowsInSection = 2
@@ -105,7 +87,7 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, RelatedTabl
             break
         case 2:
             self.getRelatedDetailsData()
-            self.numberOfRowsInSection = 2
+    
             break
         default: break
         }
@@ -115,6 +97,16 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, RelatedTabl
     func pushViewController(vc: ViewController!) {
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func scrolling(yOffset: CGFloat) {
+        if (self.tableView.contentOffset.y<headerImageView.frame.height+6 && self.tableView.contentOffset.y >= 0 && yOffset < headerImageView.frame.height && yOffset >= 0){
+            self.tableView.setContentOffset(CGPointMake(0, yOffset), animated: true)
+        }
+        else if yOffset > headerImageView.frame.height {
+            self.tableView.setContentOffset(CGPointMake(0, headerImageView.frame.height), animated: true)
+        }
+    }
 
 }
 
+    

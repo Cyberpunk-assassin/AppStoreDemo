@@ -44,6 +44,10 @@
 		86377C851D454F5A00C2AAAC /* ViewController+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86377C841D454F5A00C2AAAC /* ViewController+Datasource.swift */; };
 		86377C871D45502A00C2AAAC /* ViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86377C861D45502A00C2AAAC /* ViewController+Delegate.swift */; };
 		86377C891D4550A600C2AAAC /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86377C881D4550A600C2AAAC /* ViewController+Extension.swift */; };
+		864A14BC1D469C19003FE139 /* ChildTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A14BA1D469C19003FE139 /* ChildTVTableViewCell.swift */; };
+		864A14BD1D469C19003FE139 /* ChildTVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864A14BB1D469C19003FE139 /* ChildTVTableViewCell.xib */; };
+		864A14BF1D469DF3003FE139 /* ChildTVTableViewCell+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A14BE1D469DF3003FE139 /* ChildTVTableViewCell+Datasource.swift */; };
+		864A14C11D46A35A003FE139 /* ChildTVTableViewCell+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A14C01D46A35A003FE139 /* ChildTVTableViewCell+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		86377C841D454F5A00C2AAAC /* ViewController+Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Datasource.swift"; sourceTree = "<group>"; };
 		86377C861D45502A00C2AAAC /* ViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Delegate.swift"; sourceTree = "<group>"; };
 		86377C881D4550A600C2AAAC /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		864A14BA1D469C19003FE139 /* ChildTVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTVTableViewCell.swift; sourceTree = "<group>"; };
+		864A14BB1D469C19003FE139 /* ChildTVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTVTableViewCell.xib; sourceTree = "<group>"; };
+		864A14BE1D469DF3003FE139 /* ChildTVTableViewCell+Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChildTVTableViewCell+Datasource.swift"; sourceTree = "<group>"; };
+		864A14C01D46A35A003FE139 /* ChildTVTableViewCell+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChildTVTableViewCell+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				86377C021D43F13A00C2AAAC /* TableFormHeaderView.swift */,
+				8681B2D61D4794F30008E5E3 /* ChildTV */,
 				86377C7A1D45498E00C2AAAC /* Details */,
-				86377C7B1D4549B700C2AAAC /* Related */,
 				86377C7C1D4549CD00C2AAAC /* Reviews */,
+				86377C7B1D4549B700C2AAAC /* Related */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -168,8 +177,9 @@
 			children = (
 				86377BF41D43F11600C2AAAC /* Main.storyboard */,
 				86377C031D43F13A00C2AAAC /* TableFormHeaderView.xib */,
-				86377C7E1D454A2C00C2AAAC /* Reviews */,
+				8681B2D71D4795160008E5E3 /* ChildTV */,
 				86377C7D1D454A0400C2AAAC /* Details */,
+				86377C7E1D454A2C00C2AAAC /* Reviews */,
 				86377C7F1D454A4E00C2AAAC /* Related */,
 			);
 			name = UI;
@@ -256,6 +266,24 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		8681B2D61D4794F30008E5E3 /* ChildTV */ = {
+			isa = PBXGroup;
+			children = (
+				864A14BA1D469C19003FE139 /* ChildTVTableViewCell.swift */,
+				864A14BE1D469DF3003FE139 /* ChildTVTableViewCell+Datasource.swift */,
+				864A14C01D46A35A003FE139 /* ChildTVTableViewCell+Delegate.swift */,
+			);
+			name = ChildTV;
+			sourceTree = "<group>";
+		};
+		8681B2D71D4795160008E5E3 /* ChildTV */ = {
+			isa = PBXGroup;
+			children = (
+				864A14BB1D469C19003FE139 /* ChildTVTableViewCell.xib */,
+			);
+			name = ChildTV;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,6 +353,7 @@
 				86377C6D1D451B2E00C2AAAC /* RatingsReviewTableViewCell.xib in Resources */,
 				86377C511D44AF4300C2AAAC /* RelatedAppTableViewCell.xib in Resources */,
 				86377C141D43F20900C2AAAC /* InfoTableViewCell.xib in Resources */,
+				864A14BD1D469C19003FE139 /* ChildTVTableViewCell.xib in Resources */,
 				86377C531D44BDD600C2AAAC /* RelatedAppCollectionViewCell.xib in Resources */,
 				86377C101D43F20900C2AAAC /* ScreenShotTableViewCell.xib in Resources */,
 				86377C121D43F20900C2AAAC /* DescriptionTableViewCell.xib in Resources */,
@@ -347,13 +376,16 @@
 				86377C241D43F2BB00C2AAAC /* WhatsNewTableViewCell.swift in Sources */,
 				86377C2A1D44175A00C2AAAC /* RelatedTableViewCell.swift in Sources */,
 				86377C701D451B2E00C2AAAC /* CommentsReviewTableViewCell.swift in Sources */,
+				864A14BF1D469DF3003FE139 /* ChildTVTableViewCell+Datasource.swift in Sources */,
 				86377C071D43F13A00C2AAAC /* Details.swift in Sources */,
 				86377C891D4550A600C2AAAC /* ViewController+Extension.swift in Sources */,
 				86377C831D454E7300C2AAAC /* StarRatingView.swift in Sources */,
+				864A14BC1D469C19003FE139 /* ChildTVTableViewCell.swift in Sources */,
 				86377C6E1D451B2E00C2AAAC /* CustomerReviewTableViewCell.swift in Sources */,
 				86377C6C1D451B2E00C2AAAC /* RatingsReviewTableViewCell.swift in Sources */,
 				86377C1F1D43F2BB00C2AAAC /* ScreenShotCollectionViewCell.swift in Sources */,
 				86377C651D44E10200C2AAAC /* ReviewsModel.swift in Sources */,
+				864A14C11D46A35A003FE139 /* ChildTVTableViewCell+Delegate.swift in Sources */,
 				86377C091D43F16A00C2AAAC /* ViewController.swift in Sources */,
 				86377BF11D43F11600C2AAAC /* AppDelegate.swift in Sources */,
 				86377C1E1D43F2BB00C2AAAC /* ScreenShotTableViewCell.swift in Sources */,
@@ -405,6 +437,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -450,6 +483,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -474,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AppStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AppStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
