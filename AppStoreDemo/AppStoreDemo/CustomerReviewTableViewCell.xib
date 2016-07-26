@@ -17,7 +17,6 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Store Customer Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-lc-tL8">
                         <rect key="frame" x="18" y="13" width="215" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="215" id="2uQ-bb-xFl"/>
                             <constraint firstAttribute="height" constant="20" id="9qK-aH-gPd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>

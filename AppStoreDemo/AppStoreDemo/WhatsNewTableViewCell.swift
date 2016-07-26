@@ -39,16 +39,13 @@ class WhatsNewTableViewCell: UITableViewCell {
             self.versionDescrTextView.attributedText = nil
             self.versionDescrTextView.text = desc
         }
-
     }
     
     
     // MARK: - UITextViewDelegate
     func textViewDidChange(textView: UITextView) {
         textViewDirtyCount += 1
-        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange),
-                        withObject: nil,
-                        afterDelay: 0) 
+        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange), withObject: nil, afterDelay: 0) 
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
@@ -58,6 +55,7 @@ class WhatsNewTableViewCell: UITableViewCell {
     func textViewDidEndEditing(textView: UITextView) {
         textViewDirtyCount = -1 
     }
+    
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         self.versionDescrTextView.attributedText = nil
         self.versionDescrTextView.text = self.originalText

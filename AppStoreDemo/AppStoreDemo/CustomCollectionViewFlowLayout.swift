@@ -17,15 +17,12 @@ class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         let array = super.layoutAttributesForElementsInRect(targetRect)
         
-        for layoutAttributes in array!
-        {
+        for layoutAttributes in array! {
             
             let itemOffset = layoutAttributes.frame.origin.x
-            if (fabsf(Float(itemOffset - horizontalOffset)) < fabsf(offsetAdjustment))
-            {
+            if (fabsf(Float(itemOffset - horizontalOffset)) < fabsf(offsetAdjustment)) {
                 
                 offsetAdjustment = Float(itemOffset - horizontalOffset)
-                
             }
         }
         

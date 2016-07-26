@@ -52,9 +52,7 @@ class CommentsReviewTableViewCell: UITableViewCell {
     // MARK: - UITextViewDelegate
     func textViewDidChange(textView: UITextView) {
         textViewDirtyCount += 1
-        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange),
-                        withObject: nil,
-                        afterDelay: 0) 
+        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange), withObject: nil, afterDelay: 0) 
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
@@ -64,6 +62,7 @@ class CommentsReviewTableViewCell: UITableViewCell {
     func textViewDidEndEditing(textView: UITextView) {
         textViewDirtyCount = -1 
     }
+    
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         self.textView.attributedText = nil
         self.textView.text = self.originalText

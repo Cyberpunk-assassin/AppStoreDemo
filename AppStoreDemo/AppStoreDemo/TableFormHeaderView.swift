@@ -19,15 +19,11 @@ class TableFormHeaderView: UITableViewHeaderFooterView {
     @IBOutlet var imageViewApp: UIImageView?
     @IBOutlet var lblAppName: UILabel?
     @IBOutlet var companyName: UILabel?
-    
     @IBOutlet var lblRating: UILabel?
-        
     @IBOutlet var btnDownloadApp: UIButton?
-    
     @IBOutlet var segmentControl: UISegmentedControl?
     
     var delegate : TableFormHeaderViewDelegate!
-    
     
     @IBAction func segmentPressed(sender: UISegmentedControl) {
         if((self.delegate) != nil){

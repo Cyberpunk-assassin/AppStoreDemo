@@ -23,12 +23,8 @@ extension ChildTVTableViewCell : UITableViewDelegate {
             
         } else if self.selectedIndexNumber == 1 {
             rowHeight = UITableViewAutomaticDimension
-            
-        }
-        else if self.selectedIndexNumber == 2 {
-            
+        } else if self.selectedIndexNumber == 2 {
             rowHeight = 190
-            
         }
         return rowHeight
     }

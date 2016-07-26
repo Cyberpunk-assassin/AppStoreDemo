@@ -71,8 +71,17 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, ChildTableV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
-        
+    
+    func scrolling(yOffset: CGFloat) {
+        if (self.tableView.contentOffset.y<headerImageView.frame.height+6 && self.tableView.contentOffset.y >= 0 && yOffset < headerImageView.frame.height && yOffset >= 0){
+            self.tableView.setContentOffset(CGPointMake(0, yOffset), animated: true)
+        }
+        else if yOffset > headerImageView.frame.height {
+            self.tableView.setContentOffset(CGPointMake(0, headerImageView.frame.height), animated: true)
+        }
+    }
+    
+    //MARK: - TableFormHeaderViewDelegate
     func filteringSegmentView(sender: UISegmentedControl?) {
         self.selectedIndexNumber = sender?.selectedSegmentIndex ?? 0
         
@@ -87,24 +96,16 @@ class ViewController: UIViewController, TableFormHeaderViewDelegate, ChildTableV
             break
         case 2:
             self.getRelatedDetailsData()
-    
+            
             break
         default: break
         }
         tableView.reloadData()
     }
     
+    //MARK: - ChildTableViewCellDelegate
     func pushViewController(vc: ViewController!) {
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func scrolling(yOffset: CGFloat) {
-        if (self.tableView.contentOffset.y<headerImageView.frame.height+6 && self.tableView.contentOffset.y >= 0 && yOffset < headerImageView.frame.height && yOffset >= 0){
-            self.tableView.setContentOffset(CGPointMake(0, yOffset), animated: true)
-        }
-        else if yOffset > headerImageView.frame.height {
-            self.tableView.setContentOffset(CGPointMake(0, headerImageView.frame.height), animated: true)
-        }
     }
 
 }

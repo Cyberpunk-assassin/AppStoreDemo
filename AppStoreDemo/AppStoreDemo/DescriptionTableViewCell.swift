@@ -43,9 +43,7 @@ class DescriptionTableViewCell: UITableViewCell, UITextViewDelegate {
     // MARK: - UITextViewDelegate
     func textViewDidChange(textView: UITextView) {
         textViewDirtyCount += 1
-        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange),
-                        withObject: nil,
-                        afterDelay: 0)
+        performSelector(#selector(DescriptionTableViewCell.queuedTextVewDidChange), withObject: nil, afterDelay: 0)
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
@@ -55,6 +53,7 @@ class DescriptionTableViewCell: UITableViewCell, UITextViewDelegate {
     func textViewDidEndEditing(textView: UITextView) {
         textViewDirtyCount = -1 
     }
+    
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
         self.descTxtView.attributedText = nil
         self.descTxtView.text = self.originalText
